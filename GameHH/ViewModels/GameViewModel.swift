@@ -39,7 +39,7 @@ class GameViewModel: ObservableObject {
     }
     
     func attack() {
-        // Анимация атаки игрока
+
         player.isAttacking = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.player.isAttacking = false
@@ -56,7 +56,7 @@ class GameViewModel: ObservableObject {
         }
         
         if monster.health > 0 {
-            // Анимация атаки монстра
+
             monster.isAttacking = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 self.monster.isAttacking = false
